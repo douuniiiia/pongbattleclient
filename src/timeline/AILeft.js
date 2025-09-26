@@ -1,5 +1,5 @@
 
-import '../src/main'
+import { gsap } from "gsap";
 
 export class LeftScreen {
     constructor(parameters) {

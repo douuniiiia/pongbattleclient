@@ -1,13 +1,12 @@
 import './style.css'
 import { io } from "socket.io-client";
-import { LeftScreen } from "../timeline/AILeft";
-// import { LeftScreen, RightScreen, GameScreen } from "./src/timeline";
-import { gsap } from "gsap";
-import { RightScreen } from '../timeline/AIRight';
-import { GameScreen } from '../timeline/GameScreen';
+import { LeftScreen } from "./timeline/AILeft";
+import { RightScreen } from './timeline/AIRight';
+import { GameScreen } from './timeline/GameScreen';
 
 const socket = io("http://localhost:3000");
-let timeline = null;
+let timeline = new RightScreen;
+// timeline.play();
 
 const btnRole1 = document.querySelector("#role1")
 const btnRole2 = document.querySelector("#role2")
@@ -30,6 +29,8 @@ function selectRole(role) {
     break;
   }
 }
+
+btnRole1.addEventListener("click", selectRole("Left"));
 
 function setReady() {
   console.log("I am ready");
