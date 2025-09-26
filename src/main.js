@@ -3,6 +3,8 @@ import { io } from "socket.io-client";
 import { LeftScreen } from "../timeline/AILeft";
 // import { LeftScreen, RightScreen, GameScreen } from "./src/timeline";
 import { gsap } from "gsap";
+import { RightScreen } from '../timeline/AIRight';
+import { GameScreen } from '../timeline/GameScreen';
 
 const socket = io("http://localhost:3000");
 let timeline = null;
